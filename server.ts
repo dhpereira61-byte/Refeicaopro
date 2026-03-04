@@ -144,7 +144,7 @@ db.prepare("UPDATE employees SET type = 'outsourced' WHERE name LIKE '%BFA%' OR 
 async function startServer() {
   const app = express();
   app.use(express.json());
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
   // --- API Routes ---
 
